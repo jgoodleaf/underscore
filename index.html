@@ -181,6 +181,10 @@
     <a class="toc_title" href="#">
       Underscore.js <span class="version">(1.4.3)</span>
     </a>
+    <ul class="toc_section">
+      <li>&raquo; <a href="http://github.com/documentcloud/underscore">GitHub Repository</a></li>
+      <li>&raquo; <a href="docs/underscore.html">Annotated Source</a></li>
+    </ul>
 
     <a class="toc_title" href="#">
       Introduction
@@ -1508,7 +1512,7 @@ _.escape('Curly, Larry &amp; Moe');
         with their unescaped counterparts.
       </p>
       <pre>
-_.escape('Curly, Larry &amp;amp; Moe');
+_.unescape('Curly, Larry &amp;amp; Moe');
 =&gt; "Curly, Larry &amp; Moe"</pre>
 
       <p id="result">
@@ -1642,7 +1646,8 @@ _.chain(lyrics)
   .reduce(function(counts, word) {
     counts[word] = (counts[word] || 0) + 1;
     return counts;
-}, {}).value();
+  }, {})
+  .value();
 
 =&gt; {lumberjack : 2, all : 4, night : 2 ... }</pre>
 
